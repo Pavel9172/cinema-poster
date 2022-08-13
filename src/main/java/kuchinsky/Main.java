@@ -5,10 +5,11 @@ public class Main {
     private String[] moviesList = new String[0];
     private int limitLength = 10;
 
-    public Main(){
+    public Main() {
 
     }
-    public Main(int limitLength){
+
+    public Main(int limitLength) {
         this.limitLength = limitLength;
     }
 
@@ -27,7 +28,8 @@ public class Main {
     public void setLimitLength(int limitLength) {
         this.limitLength = limitLength;
     }
-    public void add (String movieAdd){
+
+    public void add(String movieAdd) {
         int length = moviesList.length + 1;
         String[] tmp = new String[length];
         for (int i = 0; i < length - 1; i++) {
@@ -37,23 +39,22 @@ public class Main {
         moviesList = tmp;
     }
 
-    public void findAll(){
+    public void findAll() {
         getMoviesList();
     }
-     public void findLast(){
+
+    public void findLast() {
         int resultLength = moviesList.length;
-        if (resultLength > limitLength){
+        if (resultLength > limitLength) {
             resultLength = limitLength;
         }
         String[] tmp = new String[resultLength];
         int index = moviesList.length - 1;
-        for (int i = 0; i < resultLength; i++){
-            tmp[i] = moviesList[index - 1];
+        for (int i = 0; i < resultLength; i++) {
+            tmp[i] = moviesList[index - i];
         }
         moviesList = tmp;
-     }
-
-
+    }
 
 
 }

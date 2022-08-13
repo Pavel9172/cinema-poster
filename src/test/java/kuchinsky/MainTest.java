@@ -7,15 +7,14 @@ import static org.junit.jupiter.api.Assertions.*;
 class MainTest {
 
 
-
     @Test
     void add() {
         Main manager = new Main();
-        String[] moviesListTestData = new String[]{"1", "2", "3", "4"};
+        String[] moviesListTestData = new String[]{"1", "2", "3", "4","5"};
         manager.setMoviesList(moviesListTestData);
-        String[] expected = new String[]{"1", "2", "3", "4", "5"};
+        String[] expected = new String[]{"1", "2", "3", "4", "5","6"};
 
-        String addMpvie = "5";
+        String addMpvie = "6";
         manager.add(addMpvie);
         String[] actual = manager.getMoviesList();
 
@@ -27,7 +26,7 @@ class MainTest {
         Main manager = new Main(3);
         String[] moviesListTestData = new String[]{"1", "2", "3", "4"};
         manager.setMoviesList(moviesListTestData);
-        String[] expected = new String[]{"5", "4", "3"};
+        String[] expected = new String[]{ "4", "3","2"};
 
 
         manager.findLast();
@@ -41,7 +40,7 @@ class MainTest {
         Main manager = new Main(10);
         String[] moviesListTestData = new String[]{"1", "2", "3", "4"};
         manager.setMoviesList(moviesListTestData);
-        String[] expected = new String[]{"5", "4", "3", "2", "1"};
+        String[] expected = new String[]{ "4", "3", "2", "1"};
 
 
         manager.findLast();
